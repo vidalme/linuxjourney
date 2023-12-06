@@ -19,4 +19,33 @@ Partition -> Partitions are used to help us organize our data;
 
 Filesystem structure -> its basically formed of a database that points to where the actual data is, every file or directory has an entry into this database (which is called Inode and we will dive depeer into it later.)
 
-Disk Partitioning ->
+Disk Partitioning -> hand on partioning, I couldnt do it cause I was in the cloud and I had no USB storage to work with.
+
+5. creating a filesystem -> we need a filesystem for every partition
+sudo mkfs -t ext4 /dev/sdb2
+
+6. mount and unmount -> after we create a filesystem for the partition we must mount the filesystem into a directory in the system.
+sudo mount -t ext4 /dev/sdb2 /mydrive
+
+7. /etc/fcstab -> we add our filesystem to fcstab uin order to have it automatically mounted on boot.
+
+8. swap -> a swap partition is used for emergency memory, whwnever the system needs more memory it will take it frmo the iddle processes within the swap partition.
+
+9. disk usage -> commands to check and observe
+du to check diskusage
+df to check for the free space in disks
+
+10. Filesystem repair - usually the system checks automatically our filesystem on boot before mounting it, but our filesystem can be so damaged (by a some sort of incorrect shutdown) that we will need to do some aiding ourselves, run the command fsck /dev/sda to check for the filesystems health.
+
+11. Inodes
+
+Inodes (Index node) is the entry in the partition table, it keeps al information about a file, except file name and the file itself;
+Inodes are given numbers sequentially when created (sometimes an inode will have a smmaler number because it took the place of a terminated inode)
+Inodes have about 15 pointers that determine where the actual data is in the system(including nested ones which point to other ones)
+
+12. symlinks - are files that point to another files, just like shortcuts
+there are 2 types of links soft (symlink) and hardlinks
+symlinks are capable of pointing to files across filsystems because they are named based instead of uniquely numbered like all other types of inodes.
+
+
+

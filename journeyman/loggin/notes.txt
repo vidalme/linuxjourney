@@ -1,0 +1,31 @@
+System logging
+
+services, kernel, daemons, etc... are constantly doing something, the data of those activities are saved in forms of logs, they are usually located inside the /var directory
+
+The service responsible for doing taht is the syslog
+unfornutally syslog is not a central hub for all logging events, there are many services which use their own logging rules.
+
+we can use the service syslog with the commmand logger, in fact we can just type it right into the console. logger -s Hello and it will be sent by the syslog and written in a specific file
+
+configuration file for the syslog   /etc/rsyslog.d
+
+general logging
+there are several log files but the most important ones are
+
+/var/log/messages
+/var/log/syslog
+
+Kernel loggin
+also the kernel during the booting generates a lot of logs, they can be found in 
+/var/log/dmesg (booting information)
+/var/log/kern.log (events of the system)
+
+Authentication logging
+
+/var/log/auth.log
+auth gets special treatment, we will not find its loggings inside a regular loggin file, they keep their stuff in the auth.log file.
+
+Managing log files
+Log files generate a lot of data, and it will pile up.
+Linux has a logrotate function to preventa that from happening.
+With it we can set clean up service for older logs and whatnot

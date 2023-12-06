@@ -1,0 +1,20 @@
+Trackin processes
+
+top -> this is the most used command, it really gives us a complete overwview of what our processes are doing.
+lsof -> lists all the open files (lsof = list open files) exclent to check for processes that are blcoking our machine.
+fuser -> information about the process that is uysing a specific file.
+
+Process threads ->
+A thread is like a small task of a process, like a google chrome would be a process while the ability to open a url and bookmark it at the same time would be a multi thread ability of this process.
+
+All proceses start by themselves but they can create/kill multiple threads.
+
+CPU monitoring -> uptime
+
+I/O monitoring -> reasearch for a more apropriate tool for monitoring our disk usage. This one is not in my ubuntu 22 by default and I believe there must be one out thre that comes with ubuntu22
+
+Memory monitoring -> vmstat / great command, very powerfull, needs more reading into ti but I can already tell its a very fgood one for monitoring.
+
+Continuoous monitoring -> sar / good tool to save data monitored throughout the day when we are not looking, it gives us those sum ups in the end of the day of what happened.
+
+Cron jobs -> schedule script to run whenever we want and as often as we want.

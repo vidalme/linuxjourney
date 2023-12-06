@@ -1,0 +1,12 @@
+specific topics that need further investigation and dedicate way more time to the understanding of it.
+
+Very important
+-systemd init (the whole thing, including commands)
+
+
+
+important
+-vmstat command
+
+
+somewhat important

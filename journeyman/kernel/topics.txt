@@ -1,0 +1,22 @@
+Kernel
+
+Linux is divided in 3 levels;
+Hardware / Kernel / user level (app lvl)
+Each of those levels is provided with different privileges, the kernel has full access, it is the level that can talk to the hardware, on the other hand the user level can not ever touch the hardware.
+
+How does a user do anything then? 
+with system calls.
+
+System calls (syscall)
+syscalls are pre-defined commands that a user can use to have contact with the hardware (like wirting a file into the disk), it does that trhough a system a bit too verbosed so I wont define it here, but it does involve a bit of C programming to understand it completelly.
+
+We can at least check the syscalls with the comand 'strace ls', it can be helpfull in order to debugg an app
+
+kernel instalation
+we can have multiple kernels installed, and it is actually a semi simple process to be running different ones at the saame time.
+
+kernel location
+when another kernel is isntalled it only adds a few new files to the /boot directory, tehre you will see the files related to booting kernels, lie initrd, confi, system.map
+
+kernel modules
+the kernel itself is a monolithic piece of software, and developer do not commonly touch it, instead when happens when we need a new functionality we write modules, which we can run along side the kernel, basically givin the kernel new capabilities.

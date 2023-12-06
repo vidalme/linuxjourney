@@ -1,0 +1,50 @@
+init 
+System V overview
+the main purpose of init is to start and stop essential processes on the system.
+3 main implementations of init; System V, Upstart and systemd
+
+system v runs sincroniously, in other words, it is ordened and if youhavee a service a, the next service b will only start after a isr ready. thats good for debugging, but slow to run.
+
+Upstart -> developed to fix the weaknesses of system v (slow and task blokcin)it was created by canonical for ubuntu, but it is already dead, instead ubuntu uses systemd much more frequently.
+
+
+Upstart jobs -> we canm define jobs which are tasks for jobs to do, once they run they can broadcast events to listeners who are themselves another jobs.
+
+Systemd -> its the default right now, more used than any other option and what we should focus our knowledge at. its fast and flexible.
+it can do much more than start and stop services, can also mount and target units.
+The maibn pbject system d works with are goals, they are specific for each type of task, like mount, target and services.
+
+Systemd Goals -> the actual doing of things, we access them through command in the cli
+ex:
+List units
+
+$ systemctl list-units
+View status of unit
+
+$ systemctl status networking.service
+Start a service
+
+$ sudo systemctl start networking.service
+Stop a service
+
+$ sudo systemctl stop networking.service
+Restart a service
+
+$ sudo systemctl restart networking.service
+Enable a unit
+
+$ sudo systemctl enable networking.service
+Disable a unit
+
+$ sudo systemctl disable networking.service
+
+I must research much more about systemd, no doubt about it this is an important topic and we barely touched it
+
+Power states -> these are the states the system is at, like shutown, restart..
+$ sudo shutdown -h +2
+This will shutdown your system in two minutes. You can also restart with the shutdown command:
+
+$ sudo shutdown -r now
+Or just use the reboot command:
+
+$ sudo reboot

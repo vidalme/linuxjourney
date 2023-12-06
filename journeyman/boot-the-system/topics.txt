@@ -1,0 +1,17 @@
+Boot process overview
+The boot process is alot of stuff done between pressing the power button to the login screen.
+4 step process
+Bios, bootloader, kernel, init
+
+Bios -> firs step, the main goal of the bios is to find a bootloader. its a firmware that comes commonly with IBM pc compatible computers. After Bios boots the harddrive it searchs for boot blocks to boot the system and then picjs MBR or GPT as partition table.
+UEFI si the newer replacement for bios, it was designed to run with GPT partitioning. Nowadays most the macs and windows come with UEFI instead of Bios.
+
+Bootloader -> main responsabilities are; bootin the OS, select kernel, config kernel.
+The most common bootloader for linux is GRUB.
+
+Kernel -> kernel comes with a temporary mini file system which contains all the stuff to run everything, thast done because not every driver will be ready to go when the kernel start to work. it uses the new Initramfs instead of the old school Initrd
+
+Init -> there are 3 common init types, system V init, Upstart and Systemd
+Systemd is the most commonly one, (I personally only have seen this one)
+It is a goal oriented init, we want something and systemd tries its best to provide us with the meanings to achieve it (specially dependencies)
+

@@ -1,0 +1,28 @@
+Devices
+
+Connected devices need drivers to be used properly.
+Drivers are the actual digital representation of the devices
+We find their files in the /dev directory.
+They are just files, as usual.
+
+File types
+c - character
+b - block
+p - pipe
+s - socket
+
+SCSI - Devices for mass storage  
+Pseudo devices - not phisically connected to the machine
+PATA devices -> old school representation
+
+Sysfs - extended tooling for devices, contains info about the devices on the system, it is a 100% virtual system.
+
+udev - helps in creating and managin new/old devices, back in the day we would have to create them manualy, down to the directory creation.
+
+There are listing commands specificly for devices, like lsusb, lspci, lsscsi
+
+dd -> very powerfull command, can backup entire disks and restoring backup images
+it is basically a command to transfer data from a place to another. 
+ex: $ dd if=/home/pete/backup.img of=/dev/sdb bs=1024
+This one need further investigation before messing with it.
+

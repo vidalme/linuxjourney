@@ -1,0 +1,12 @@
+package repositories are provided byy everyone who wants to make them, thats a convenient way for linux users to download and install software. Also the distro which we are using already comes with its onw collection of softwares pre-installed and aproved.
+
+Tar and Gzip -> archiving and compressing. 
+Archiving can pile up many files into a single convenient file.
+Gzip will make it compressed (smaller
+
+Almost every package has dependecies, they rarely work alone)
+
+dpkg -> debian, ubuntu, mint...-> apt
+rpm -> red hat, centos, fedora... -> yum
+
+For compiling source code we will need to do some extra work, look it up, wont memorize this.

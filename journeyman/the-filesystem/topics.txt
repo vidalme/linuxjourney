@@ -1,0 +1,22 @@
+Filesystem hierarchy
+
+the root directory contains directories that each holds specific type of information, they do follow a decent structure but there are ocasion where they dont for different reasons()
+
+Filesystem types, there are several, but also there is an abstraction layer between applcations and the different types of filestytem, the abstraction layer allows those 2 parts to communicate, it works as a translator for the different types os filesytem.
+
+Journaling - makes sure the system keeps track of whatever we are movinng or copying files (specially larger ones), its handy in case of sudden interruptions like a power shortage. Journaling usually comes by default on most systems
+
+important command: df
+
+df T - checks files systems in the machine.
+
+Anatomy of a Disk
+Every disk is partioned in "parts", thats usefull for separation like; we can use different files system for each partition.
+
+Partition Table -> every disk need a partition table, it is where all the info about the partitions are, size, type, type: GPT and MBR are the most well know types.
+
+Partition -> Partitions are used to help us organize our data;
+
+Filesystem structure -> its basically formed of a database that points to where the actual data is, every file or directory has an entry into this database (which is called Inode and we will dive depeer into it later.)
+
+Disk Partitioning ->

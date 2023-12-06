@@ -1,0 +1,29 @@
+processess are the programs that run the machine, they are managed by the kernel.
+ps aux - shows all (a) proccess with details (u) and (x) will list proccess with no TTY associated
+
+TTY - is the terminal that executed a command. 2 different tyupes, terminal devices and pseudoterminal devices;
+
+All proccess are cloned of its parents, the first proccess craeted during initial booting is called "init", all other ones are modificated clones of the mother proccess.
+
+ps -l -> shows a very detailed look into it
+
+Process termination, processes have a system to terminate called "_exit". All processes check with their parent proccess when they are going to finish.
+Orphan processes -> when parents die and they cant let them kids know, they are claled orphans and become sub-proccesses of init.
+
+zombie processes - these give up their resources but stayed in hte list of processes
+
+Signals - > are notifications sent to processes, (ctrl c and ctrl z to stop processes are actual signals being sent to them.
+
+We can kill process with the command kill.
+#this command kills a process
+$ kill 12445
+#this command kills with fire! (unstopable)
+$ kill -9 12445)
+
+Niceness -> how relevant a process is, how important it is in the queue for resources allocated from the kernel.
+
+Process states -> where is at ni its lifecycle
+
+/proc filestystem - in a good linux fashion, everything is a file, all processes are in the /proc directory
+
+Job control -> we can control how the processes run through jobs, so we cant have them runningin the background or foreground, that way we can still wrok on our terminal while we have a job runnning.

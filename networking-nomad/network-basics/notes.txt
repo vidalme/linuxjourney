@@ -1,0 +1,17 @@
+OSI Model - is a theretical model of a network, it is the model we use.
+it defines how a packet travel through the network, it is divided in seven steps each one with its onw specific tasks and rules.
+The OSI model gave birth to the TCP/IP
+
+TCP/IP -> its a protocol suit where those protocols are standards on how data is gathered, addressed, transmited and routed through a network.
+
+Application layer -> its where we all interact, its job is to get data ready to be sent to the transport laye, as far as I know, it basically just dumps it on the transport layer.
+protocols used -> http/smtp
+
+Transport Layer -> How data will be transmited, check ports and integrity of data.
+protocols used -> TCP/UDP
+
+Network Layer -> it specifies how to move the packets between host and networks
+tooling -> IP / ICMP
+
+Link Layer -> it tells how to send data (now with all details we need it to find its way)across the actual phisical tooling, ethernet, fibers, cabels...
+

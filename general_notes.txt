@@ -3,10 +3,9 @@ specific topics that need further investigation and dedicate way more time to th
 Very important
 -systemd init (the whole thing, including commands)
 
-
-
 important
 -vmstat command
-
+-ip addr (command)
+-nm-tool
 
 somewhat important

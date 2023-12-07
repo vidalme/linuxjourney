@@ -1,0 +1,40 @@
+Routing
+
+What is a router?
+A router is a device (phisically or not) that will know what to do with data sent from a place to another ni a network.
+
+Hops -> are any points where data will check during its travelling from a to b.
+
+Router takes care of those 2 jobs
+Switching - receiving, processing and forwarding data
+Routing - process of creating the routing table so we can switching better.
+
+Routing table -> the plan, where and how data can move around
+Destination, gateway, genmask (subnet mask), flags, Iface (the interface the packet will go to)
+
+Path of packet
+This explained how the packet travelling differs when in a local network vs outside its network.
+Its a process with several steps with focus on aquiring 4 itens
+
+source IP
+target IP
+source MAC address
+target MAC address
+
+The main difference is how we aquire the target MAC address when travelling outside the network, since it canot load localy the ARP service (it only works within its onw network)
+
+Routing protocols
+Convergece ->its how the wholenetwork gets the same information on how the network lookslike and functionalities.
+
+Distance vector protocols
+good for smaller networks, cant scale at all.
+15 hops limit
+
+Link state protocols
+way more complext but can scale very well.
+they do not periodically send route tables everywherer, they only send updates to neighbors.
+the most common link state protocol is OSPF, only updates when there was an actual change to the network and also there is no hop limits
+
+Border Gateway Protocol BGP
+this is the way networks talk to networks, the very foundation of the internet, thatsw the main idea of the whole thing, a network of networks.
+

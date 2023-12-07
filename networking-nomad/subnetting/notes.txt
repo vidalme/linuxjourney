@@ -1,0 +1,15 @@
+Subnetting
+
+IPv4 everything connected to the network needs an IP, its their address
+
+Subnets -> a group of hosts inter connected under a certain range of IPs
+
+Subnet Math -> the way we calculate  ips ranges and their binarie numbers
+
+Subnetting cheats -> how to do the conversion of IP
+
+CIDR -> an alternative way to describe a IP range that forms a subnet
+
+NAT -> its the endpoint of a subnet, the recepcionist of a network really, everyone who wants to talk to our subnet will go through our NAT gate
+
+IPv6 -> expanded on IP4, almost the same but more slots available

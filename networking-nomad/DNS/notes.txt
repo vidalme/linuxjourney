@@ -1,0 +1,39 @@
+What is DNS?
+DNS allows the internet to use easy domain names for humans while at the same time translates everything for machine language, IPs.
+
+DNS components
+Name server
+They are the bootloaders for a dns search, its who configures and sets it up, its where we go as well to ask for some questions about what we are looking for.
+
+Zone fiel
+if name servers are librarians in a library, zone files would be the shelves keeping the books (resource records)
+
+Reource Reocrds
+keeping the same metaphor, resource records would be the books with the actual information of the IP we are lookig for.,
+
+DNS process
+
+Local DNS server 
+dns first looks inside our own machine.
+
+Root servers
+those are 13 root servers spread out around the globe, they will direct us in the right direction.
+
+Top-Level Domain
+Here we will funnel up the search by .com, .info, .net... etc.
+
+Authoritatve DNS server
+here lies our target, the actual container of the data we are looikuing for
+
+/etc/hosts
+this is our internal database of dns addresses, we can fidge it with but not recomended, we normally should be using a manager for that
+
+
+DNS setup
+BIND is the most popular DNS server on the internet.
+
+DNS tools
+
+we have 2 commands nslookup and dig (it seems dig is the best choice with more flexibility and robustness)
+
+dig www.google.com

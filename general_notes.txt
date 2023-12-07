@@ -2,10 +2,12 @@ specific topics that need further investigation and dedicate way more time to th
 
 Very important
 -systemd init (the whole thing, including commands)
+-dns as a whole theme needs further investigation
 
 important
 -vmstat command
 -ip addr (command)
 -nm-tool
+-dig (should read on it a bit)
 
 somewhat important

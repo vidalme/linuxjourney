@@ -1,1 +1,34 @@
-q:qw
+ICMP
+icmp is part of the tcp/ip protocol suite.Very helpfull in debugging netweork issues as failed packet deliverey.
+Each ICMP message has a type that gives us a broad idea of the problem.
+There is also a sub type that funnels the issue further, very powerfull.
+BOth types and subtypes are represented by numbers.
+
+
+Type 0 - Echo Reply
+Type 3 - Destination Unreachable
+Type 8 - Echo Request
+Type 11 - Time Exceeded
+
+ping
+one of the simplest yet most helpfull commands. send an echo request to the server and back, then displays a few details about the traject.
+ex: 
+ping -c 3 www.google.com
+the  flag -c is for limiting the number of hops this packet will livefor.
+
+ttl -> hop counter, it makes sure packets wont be bouncing around the network ad infinitum.
+
+traceroute
+it works like a ping but with different steps, each step tryingot to reach further into the complete path.
+
+ss (replaced the netstat edscibed in the tutorial)
+extremely powerfull command,gives us detailed information on network connections, routing tabels, it is trully the swiss army knife of network debugging commands.
+
+ss -at
+the option -a shows all, listening and non-listening sockets, the -t for tcp only.
+
+Packet analysis
+very extensive subject, books are written only about this.
+2 most known analyzing apps are Wireshark and tcpdump
+so much can be seen in a deeper analisys.
+
